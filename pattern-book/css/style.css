@@ -109,11 +109,17 @@ header {
 	border-bottom: 1px solid #484e4e;
 }
 
+header .container {
+	table-layout: fixed;
+}
+
 header .container,
 header nav ul {
 	display: table;
+}
+
+header nav ul {
 	width: 100%;
-	table-layout: fixed;
 }
 
 header nav {
@@ -273,6 +279,7 @@ header nav ul li a:hover {
 
 .team-section .thumb {
 	padding: 0 20px;
+	
 }
 
 .team-section .thumb h3 {
@@ -331,6 +338,58 @@ header nav ul li a:hover {
 	opacity: 1;
 }
 
+
+.team-section .thumb .follows {
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	top: 100%;
+	margin-top: -20px;
+	margin-left: -63px;
+	display: inline-block;
+	-webkit-transition: top 0.3s ease-out;
+	   -moz-transition: top 0.3s ease-out;
+	    -ms-transition: top 0.3s ease-out;
+	     -o-transition: top 0.3s ease-out;
+	        transition: top 0.3s ease-out;
+}
+
+.team-section .thumb:hover .follows {
+	top: 50%;
+}
+.team-section .follows li {
+	float: left;
+	margin-left: 2px;
+}
+
+.team-section .follows li a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(59,89,152, 0.9);
+	-webkit-background-size: 25px 25px;
+	     -o-background-size: 25px 25px;
+	        background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.team-section .follows li a:hover {
+	background-color: rgba(45,193,197, 0.9);
+}
+
+.team-section .follows li a.facebook {
+	background-image: url('../img/ico_facebook.svg');	
+}
+
+.team-section .follows li a.linkedin {
+	background-image: url('../img/ico_linkedin.svg');		
+}
+
+.team-section .follows li a.twitter {
+	background-image: url('../img/ico_twitter.svg');	
+}
+
 /***************************
 === PATERNS SECTION ===
 ***************************/
@@ -375,8 +434,12 @@ header nav ul li a:hover {
 .content-section h4,
 .content-section h5,
 .content-section h6 {
-	text-align: center;
+	text-align: left;
+	padding-left: 30px;
 	margin: 20px 0px;
+	border-left: 5px solid #2dc1c5;	
+	font-family: 'Lobster', cursive;
+	line-height: 1.25em;
 }
 
 .content-section h1 {
@@ -405,6 +468,37 @@ header nav ul li a:hover {
 
 .content-section p {
 	margin: 20px 0px;
+	line-height: 1.75em;
+}
+
+.content-section i {
+	font-style: italic;
+}
+
+.content-section b {
+	font-weight: 600;
+}
+
+.content-section p.paragraph-three-column {
+	margin: 40px 0;
+  -webkit-column-count: 3;
+		 -moz-column-count: 3;
+    	 	 	column-count: 3;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+   	 	 	  column-gap: 50px;
+   text-align:justify;
+}
+
+.content-section p.paragraph-two-column {
+	margin: 40px 0;
+  -webkit-column-count: 2;
+		 -moz-column-count: 2;
+    	 	 	column-count: 2;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+   	 	 	  column-gap: 50px;
+   text-align:justify;
 }
 
 .content-section pre {
@@ -416,6 +510,47 @@ header nav ul li a:hover {
   margin: 20px auto;
   white-space: pre-line;
   color: #fe9373;
+}
+
+.content-section .wrap-image {
+	position: relative;
+	display: inline-block;
+	margin: 20px 0px;
+}
+
+.content-section .wrap-image img {
+	position: relative;
+	z-index: 2;
+	width: auto;
+	border: 5px solid #eaeedd;
+}
+
+.content-section .wrap-image:before {
+	content: "";
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(254,147,115, 0.15);
+}
+
+.content-section ul {
+	
+}
+
+.content-section ul li {
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 30px;
+}
+
+.content-section ul li:before {
+	position: absolute;
+	content: "⚫";
+	top: 3px;
+	left: 0;
 }
 
 
