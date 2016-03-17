@@ -227,44 +227,44 @@
 						Джеймс Коплиен показал, как в C++ можно применить идиому описатель/тело, чтобы несколькими объектами могла совместно использоваться одна и та же реализация [Сор92]. В теле хранится счетчик ссылок, который увеличивается и уменьшается в классе описателя. Код для присваивания значений описателям, разделяющим одно тело,  в общем виде выглядит так:
 						<pre>
 							Handles Handle::operator= (const Handles other) {
-								&nbsp;&nbsp;other._body->Ref();
-								&nbsp;&nbsp;_body->Unref();
-						
-								&nbsp;&nbsp;if (_body->RefCount() == 0) {
-								&nbsp;&nbsp;delete _body;
-								&nbsp;&nbsp;body = other._body;
+							&nbsp;&nbsp;other._body->Ref();
+							&nbsp;&nbsp;_body->Unref();
 					
-								&nbsp;&nbsp;return *this; 
-								&nbsp;&nbsp;class Window {
-								&nbsp;&nbsp;public:
-								&nbsp;&nbsp;Window(View* contents);
-						
-								&nbsp;&nbsp;// запросы, обрабатываемые окном
-								&nbsp;&nbsp;virtual void DrawContents();
-						
-								&nbsp;&nbsp;virtual void Open();
-								&nbsp;&nbsp;virtual void Close();
-								&nbsp;&nbsp;virtual void IconifyO,-
-								&nbsp;&nbsp;virtual void Deiconify();
-						
-								&nbsp;&nbsp;// запросы, перенаправляемые реализации
-								&nbsp;&nbsp;virtual void SetOrigin(const Point& at);
-								&nbsp;&nbsp;virtual void SetExtent(const Point& extent);
-								&nbsp;&nbsp;virtual void Raise();
-								&nbsp;&nbsp;virtual void Lower();
-						
-								&nbsp;&nbsp;Virtual void DrawLine(const Points, const Point&);
-								&nbsp;&nbsp;virtual void DrawRect(const Point&, const Point&);
-								&nbsp;&nbsp;virtual void DrawPolygon(const Point[], int n);
-								&nbsp;&nbsp;virtual void DrawText(const char*, const Point&);
-						
-								&nbsp;&nbsp;protected:
-								&nbsp;&nbsp;Windowlmp* GetWindowImp();
-								&nbsp;&nbsp;View* GetViewO ;
-						
-								&nbsp;&nbsp;private:
-								&nbsp;&nbsp;Windowlmp* _imp;
-								&nbsp;&nbsp;View* _contents; // содержимое окна
+							&nbsp;&nbsp;if (_body->RefCount() == 0) {
+							&nbsp;&nbsp;delete _body;
+							&nbsp;&nbsp;body = other._body;
+				
+							&nbsp;&nbsp;return *this; 
+							&nbsp;&nbsp;class Window {
+							&nbsp;&nbsp;public:
+							&nbsp;&nbsp;Window(View* contents);
+					
+							&nbsp;&nbsp;// запросы, обрабатываемые окном
+							&nbsp;&nbsp;virtual void DrawContents();
+					
+							&nbsp;&nbsp;virtual void Open();
+							&nbsp;&nbsp;virtual void Close();
+							&nbsp;&nbsp;virtual void IconifyO,-
+							&nbsp;&nbsp;virtual void Deiconify();
+					
+							&nbsp;&nbsp;// запросы, перенаправляемые реализации
+							&nbsp;&nbsp;virtual void SetOrigin(const Point& at);
+							&nbsp;&nbsp;virtual void SetExtent(const Point& extent);
+							&nbsp;&nbsp;virtual void Raise();
+							&nbsp;&nbsp;virtual void Lower();
+					
+							&nbsp;&nbsp;Virtual void DrawLine(const Points, const Point&);
+							&nbsp;&nbsp;virtual void DrawRect(const Point&, const Point&);
+							&nbsp;&nbsp;virtual void DrawPolygon(const Point[], int n);
+							&nbsp;&nbsp;virtual void DrawText(const char*, const Point&);
+					
+							&nbsp;&nbsp;protected:
+							&nbsp;&nbsp;Windowlmp* GetWindowImp();
+							&nbsp;&nbsp;View* GetViewO ;
+					
+							&nbsp;&nbsp;private:
+							&nbsp;&nbsp;Windowlmp* _imp;
+							&nbsp;&nbsp;View* _contents; // содержимое окна
 							};
 						</pre>
 						<p>В классе Window хранится ссылка на Windowlmp - абстрактный класс, в котором объявлен интерфейс к данной оконной системе:</p>
