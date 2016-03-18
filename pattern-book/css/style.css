@@ -183,10 +183,79 @@ header nav ul li a:hover {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: url('../img/promo_bg_1.jpg') 0 0 no-repeat;
+	background-image: url('../img/promo_bg_1.jpg');
+	background-repeat: no-repeat;
+	-webkit-background-position: 50% 50%;
+	     -o-background-position: 50% 50%;
+	        background-position: 50% 50%;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
+}
+
+.promo-section.adapter-promo {
+	background-image: url('../img/promo_bg_2.jpg');
+}
+
+.promo-section.bridge-promo {
+	background-image: url('../img/promo_bg_3.jpg');
+	background-color: #97cb6f;
+	-webkit-background-size: 50% 50%;
+	     -o-background-size: 50% 50%;
+	        background-size: 50% 50%;
+	-webkit-background-position: 50% 6%;
+	     -o-background-position: 50% 6%;
+	        background-position: 50% 6%;
+}
+
+.promo-section.bridge-promo .overlay {
+	background: rgba(234,238,221, 0.25);
+}
+
+.promo-section.composite-promo {
+	background-image: url('../img/promo_bg_4.jpg');	
+	background-color: #364b71;
+	-webkit-background-size: 70% 70%;
+	     -o-background-size: 70% 70%;
+	        background-size: 70% 70%;
+	-webkit-background-position: 50% 0%;
+	     -o-background-position: 50% 0%;
+	        background-position: 50% 0%;
+}
+
+.promo-section.decorator-promo {
+	background-image: url('../img/promo_bg_5.jpg');	
+	background-color: #fe9373;
+	-webkit-background-size: 50% 50%;
+	     -o-background-size: 50% 50%;
+	        background-size: 50% 50%;
+	-webkit-background-position: 50% 6%;
+	     -o-background-position: 50% 6%;
+	        background-position: 50% 6%;
+}	    
+
+.promo-section.fasade-promo {
+	background-image: url('../img/promo_bg_6.jpg');	
+}
+
+.promo-section.flyweight-promo {
+	background-image: url('../img/promo_bg_7.jpg');	
+	background-color: #fec746;
+	-webkit-background-size: 50% 50%;
+	     -o-background-size: 50% 50%;
+	        background-size: 50% 50%;
+	-webkit-background-position: 50% 6%;
+	     -o-background-position: 50% 6%;
+	        background-position: 50% 6%;
+}
+
+
+.promo-section.proxy-promo {
+	background-image: url('../img/promo_bg_8.jpg');	
+}
+
+.promo-section.proxy-promo .titles-wrapper h1 {
+	background: #fe9373;
 }
 
 .promo-section .overlay {
