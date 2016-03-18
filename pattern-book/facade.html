@@ -174,7 +174,7 @@
 					<pre>
 					void ExpressionNode::Traverse (CodeGenerator& eg) {
 					&nbsp;&nbsp;eg.Visit(this);
-					&nbsp;&nbsp;ListIterator<ProgramNode*> i(_children);
+					&nbsp;&nbsp;ListIterator programnode i(_children);
 					&nbsp;&nbsp;for (i. First ( ) ; ! i . IsDone () ; i.NextO) {
 					&nbsp;&nbsp;i.Currentltem()->Traverse(eg);
 					&nbsp;&nbsp;}
