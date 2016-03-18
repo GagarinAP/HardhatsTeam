@@ -7,12 +7,26 @@ Theme colors
 #fe9373 / 254,147,115  - links/button color/backgroud(orange);
 */
 
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/open-sans.woff') format('woff'),
+         url('fonts/open-sans.ttf') format('truetype'),
+         url('fonts/open-sans.svg#OpenSans') format('svg');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('fonts/lobster.woff') format('woff'),
+         url('fonts/lobster.ttf') format('truetype'),
+         url('fonts/lobster.svg#Lobster') format('svg');
+}
+
 body {
 	background: #6a8888;
 	color: #eaeedd;
 	font-size: 14px;
 	line-height: 1.4em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'OpenSans';
 	/*font-family: 'Lobster', cursive;  SECOND font*/ 
 	font-weight: normal;
 }
@@ -199,7 +213,7 @@ header nav ul li a:hover {
 
 .promo-section.bridge-promo {
 	background-image: url('../img/promo_bg_3.jpg');
-	background-color: #97cb6f;
+	background-color: #9eb18f;
 	-webkit-background-size: 50% 50%;
 	     -o-background-size: 50% 50%;
 	        background-size: 50% 50%;
@@ -225,7 +239,7 @@ header nav ul li a:hover {
 
 .promo-section.decorator-promo {
 	background-image: url('../img/promo_bg_5.jpg');	
-	background-color: #fe9373;
+	background-color: #b26c57;
 	-webkit-background-size: 50% 50%;
 	     -o-background-size: 50% 50%;
 	        background-size: 50% 50%;
@@ -240,7 +254,7 @@ header nav ul li a:hover {
 
 .promo-section.flyweight-promo {
 	background-image: url('../img/promo_bg_7.jpg');	
-	background-color: #fec746;
+	background-color: #586565;
 	-webkit-background-size: 50% 50%;
 	     -o-background-size: 50% 50%;
 	        background-size: 50% 50%;
@@ -480,7 +494,7 @@ header nav ul li a:hover {
 .patterns-section .thumb h3 {
 	margin: 20px 0px;
 	font-size: 20px;
-	color: #2DC1C5;
+	color: #484e4e;
 	font-weight: 600;
 }
 
