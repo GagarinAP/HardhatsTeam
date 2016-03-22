@@ -1,15 +1,15 @@
 /*
 Theme colors
 =============
-#f1f1f1 / 241,241,241 - body-background (light-grey);
-#444e5d / 7,26,33  - font-color      (dark-grey-blue);
-#2dc1c5 / 45,193,197 - section-backgroud (see-aqua);
-#ed1846 / 237,24,70  - links/button color/backgroud(orange);
+#f6f9f9 / 246, 249, 249 - body-background (light-grey);
+#2d3950 / 45, 57, 80  - font-color      (dark-grey-blue);
+#2d3950 / 45,193,197 - border-color (grey);
+#15a4fa / 21, 164, 250  - links/button color/backgroud(orange);
 */
 
 body {
-	background: #f1f1f1;
-	color: #071a21;
+	background-color: #f6f9f9;
+	color: #2d3950;
 	font-size: 14px;
 	line-height: 1.75em;
 	font-family: 'Verdana';
@@ -29,7 +29,7 @@ a {
 	    -ms-transition: all 0.15s ease;
 	     -o-transition: all 0.15s ease;
 	        transition: all 0.15s ease;
-	color: #ed1846;
+	color: #15a4fa;
 }
 
 img {
@@ -54,18 +54,34 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
+	background: #f6f9f9;
 	padding: 20px 0;
 }
 
 header .logo {
+
 	font-size: 32px;
 	text-transform: uppercase;
 }
 
 header .logo span {
-	color: #F1F1F1;
+	color: #2d3950;
 	text-transform: none;
 }
+
+.row {
+	position: relative;
+	display: inline-block;
+	margin: 0 -10px;
+}
+
+.column-four {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
+
 
 /***************************
 === PROMO SECTION ===
@@ -73,7 +89,8 @@ header .logo span {
 .promo-section {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	padding: 140px 0 70px 0;
+	
 	background: url('../img/image_01.jpg') 50% 50% no-repeat;
 }
 
@@ -84,35 +101,53 @@ header .logo span {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(7,26,33, 0.9);
+	background: rgba(45, 57, 80, 0.9);
+}
+
+.promo-section h1 {
+	margin-bottom: 30px;
+ 	text-align: center;
+ 	font-size: 36px;
+ 	color: #f6f9f9;
+ 	line-height: 1.45em;
 }
 
 .promo-section .container {
 	position: relative;
 	z-index: 2;
-	display: table;
 	height: 100%;
 }
 
+.promo-section .thumb-image {
+	position: relative;
+	border: 2px solid #f6f9f9; 
+	display: block;
+	margin-bottom: 20px;
+}
+
 .promo-section .image-wrap {
-	display: table-cell;
-	vertical-align: middle;
-	width: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	margin: -125px 0 0 -125px;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	border: 2px solid #f6f9f9;
 }
 
-.promo-section .titles-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-	width: 60%;
-	padding-left: 30px;
+.promo-section .thumb-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(21, 164, 250, 0.5);
 }
 
-.promo-section h1 {
-	text-align: center;
-	font-size: 46px;
-	color: #F1F1F1;
-	line-height: 1.45em;
-}
 
 /***************************
 === CONTENT SECTION ===
