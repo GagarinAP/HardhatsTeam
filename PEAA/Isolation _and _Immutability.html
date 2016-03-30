@@ -11,34 +11,17 @@
 </head>
 <body>
 	<header>
-		<a href="index.html" class="go-home-button">&nbsp;</a>
 		<div class="container">
-			<nav>
-				<ul>
-					<li><a href="" class="active"></a></li><!-- !!! link MUST have .active class on corresponding page !!! -->
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li> 
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</ul>
-			</nav>
+			<a href="#" class="logo">Martin <span>Fowler</span></a>
+			<a href="index.html" class="home-link">&nbsp;</a>
 		</div>
 	</header>
-	<section class="promo-section adapter-promo">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="titles-wrapper">
-					<h1>Isolation and Immutability</h1>
-			</div>
+	<main>
+		<section class="content-section">
+			<h1>Isolation and Immutability</h1>
 			<div class="wrap-image">
 					<img src="img/image_08.jpg" alt="">
 			</div>
-		</div>
-	</section>
-	<main>
-		<section class="content-section">
 			<div class="container">
 				<p>The problems of concurrency have been around for a while, and software people have come up with various solutions. For enterprise applications two solutions are particularly important: isolation and immutability.</p>
 				<p>Concurrency problems occur when more than one active agent, such as a process or thread, has access to the same piece of data. One way to deal with this is isolation: Partition the data so that any piece of it can only be accessed by one active agent. Processes work like this in operating system memory: The operating system allocates memory exclusively to a single process, and only that process can read or write the data linked to it. Similarly you find file locks in many popular productivity applications. If Martin opens a file, nobody else can open it. They may be allowed to open a read-only copy of the file as it was when Martin started, but they can't change it and they don't get to see the file between his changes.</p>
