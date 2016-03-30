@@ -71,6 +71,16 @@ header .logo span {
 	text-transform: none;
 }
 
+header .home-link {
+	float: right;
+	width: 39px;
+	height: 39px;
+	background: url(../img/home.svg) 100% 100% no-repeat;
+	-webkit-background-size: 39px 39px;
+	     -o-background-size: 39px 39px;
+	        background-size: 39px 39px;
+}
+
 footer {
 	padding: 15px 0;
 	background: #B9BFBF;
