@@ -11,34 +11,17 @@
 </head>
 <body>
 	<header>
-		<a href="index.html" class="go-home-button">&nbsp;</a>
 		<div class="container">
-			<nav>
-				<ul>
-					<li><a href="" class="active"></a></li><!-- !!! link MUST have .active class on corresponding page !!! -->
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li> 
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</ul>
-			</nav>
+			<a href="#" class="logo">Martin <span>Fowler</span></a>
+			<a href="index.html" class="home-link">&nbsp;</a>
 		</div>
 	</header>
-	<section class="promo-section adapter-promo">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="titles-wrapper">
-					<h1>The Value of Statelessness</h1>
-			</div>
+	<main>
+		<section class="content-section">
+			<h1>The Value of Statelessness</h1>
 			<div class="wrap-image">
 					<img src="img/image_10.jpg" alt="">
 			</div>
-		</div>
-	</section>
-	<main>
-		<section class="content-section">
 			<div class="container">
 				<p>What do people mean by a stateless server? The whole point of objects, of course, is that they combine state (data) with behavior. A true stateless object is one with no fields. Such animals do show up from time to time, but frankly, they're pretty rare. Indeed, you can make a strong case that a stateless object is a bad design.</p>
 				<p>As it turns out, however, this isn't what most people mean when they talk about statelessness in a distributed enterprise application. When people refer to a stateless server they mean an object that doesn't retain state between requests. Such an object may well have fields, but when you invoke a method on a stateless server the values of the fields are undefined.</p>

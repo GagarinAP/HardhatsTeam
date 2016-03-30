@@ -11,34 +11,17 @@
 </head>
 <body>
 	<header>
-		<a href="index.html" class="go-home-button">&nbsp;</a>
 		<div class="container">
-			<nav>
-				<ul>
-					<li><a href="" class="active"></a></li><!-- !!! link MUST have .active class on corresponding page !!! -->
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li> 
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</ul>
-			</nav>
+			<a href="#" class="logo">Martin <span>Fowler</span></a>
+			<a href="index.html" class="home-link">&nbsp;</a>
 		</div>
 	</header>
-	<section class="promo-section adapter-promo">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="titles-wrapper">
-					<h1>Patterns for Offline Concurrency Control</h1>
-			</div>
+	<main>
+		<section class="content-section">
+			<h1>Patterns for Offline Concurrency Control</h1>
 			<div class="wrap-image">
 					<img src="img/image_09.jpg" alt="">
 			</div>
-		</div>
-	</section>
-	<main>
-		<section class="content-section">
 			<div class="container">
 				<p>As much as possible, you should let your transaction system deal with concurrency problems. Handling concurrency control that spans system transactions plonks you firmly in the murky waters of dealing with concurrency yourself. This water is full of virtual sharks, jellyfish, piranhas, and other, less friendly creatures. Unfortunately, the mismatch between business and system transactions means you sometimes just have to wade in. The patterns that we've provided here are some techniques that we've found helpful in dealing with concurrency control that spans system transactions.</p>
 				<p>Remember that these are techniques you should only use if you have to. If you can make all your business transactions fit into a system transaction by ensuring that they fit within a single request, then do that. If you can get away with long transactions by forsaking scalability, then do that. By leaving concurrency control in the hands of your transaction software you'll avoid a great deal of trouble. These techniques are what you have to use when you can't do that. Because of the tricky nature of concurrency, we have to stress again that the patterns are a starting point, not a destination. We've found them useful, but we don't claim to have found a cure for all concurrency ills.</p>
