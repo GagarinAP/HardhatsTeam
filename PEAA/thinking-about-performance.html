@@ -10,31 +10,17 @@
 </head>
 <body>
 	<header>
-		<a href="index.html" class="go-home-button">&nbsp;</a>
 		<div class="container">
-			<nav>
-				<ul>
-					<li><a href="" class="active"></a></li><!-- !!! link MUST have .active class on corresponding page !!! -->
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li> 
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</ul>
-			</nav>
+			<a href="#" class="logo">Martin <span>Fowler</span></a>
+			<a href="index.html" class="home-link">&nbsp;</a>
 		</div>
 	</header>
-	<section class="promo-section adapter-promo">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="titles-wrapper">
-					<h1>Thinking About Performance</h1>
-			</div>
-		</div>
-	</section>
 	<main>
 		<section class="content-section">
+			<h1>Thinking About Performance</h1>
+			<div class="wrap-image">
+					<img src="img/image_03.jpg" alt="">
+				</div>
 			<div class="container">
 				<p>Many architectural decisions are about performance. For most performance issues I prefer to get a system	up and running, instrument it, and then use a disciplined optimization process based on measurement.	However, some architectural decisions affect performance in a way that's difficult to fix with later	optimization. And even when it is easy to fix, people involved in the project worry about these decisions	early.</p>
 				<p>It's always difficult to talk about performance in a book such as this. The reason that it's so difficult is that	any advice about performance should not be treated as fact until it's measured on your configuration. Too	often I've seen designs used or rejected because of performance considerations, which turn out to be bogus	once somebody actually does some measurements on the real setup used for the application.</p>
