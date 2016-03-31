@@ -7,7 +7,6 @@
 	<title>Reading in Data page</title>
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<!-- <link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,700,300italic,600&subset=latin,cyrillic' rel='stylesheet' type='text/css' /> -->
 </head>
 <body>
 	<header>
@@ -24,7 +23,7 @@
 				<div class="wrap-image">
 					<img src="img/image_05.jpg" alt="">
 				</div>
-			    <p>When reading in data I like to think of the methods as <b>finders</b> that wrap SQL select statements with a method-structured interface. Thus, you might have methods such as find(id) or    findForCustomer(customer). Clearly these methods can get pretty unwieldy if you have 23 different clauses in your select statements, but these are, thankfully, rare.</p>
+			  <p>When reading in data I like to think of the methods as <b>finders</b> that wrap SQL select statements with a method-structured interface. Thus, you might have methods such as find(id) or    findForCustomer(customer). Clearly these methods can get pretty unwieldy if you have 23 different clauses in your select statements, but these are, thankfully, rare.</p>
 				<p>Where you put the finder methods depends on the interfacing pattern used. If your database interaction classes are table based-that is, you have one instance of the class per table in the database—then you can combine the finder methods with the inserts and updates. If your interaction classes are row based—that is, you have one interaction class per row in the database—this doesn't work.</p>
 				<p>With row-based classes you can make the find operations static, but doing so will stop you from making the database operations substitutable. This means that you can't swap out the database for testing purposes with <i>Service Stub (504)</i>. To avoid this problem the best approach is to have separate finder objects. Each finder class has many methods that encapsulate a SQL query. When you execute the query, the finder object returns a collection of the appropriate row-based objects.</p>
 				<p>One thing to watch for with finder methods is that they work on the database state, not the object state. If you issue a query against the database to find all people within a club, remember that any person objects you've added to the club in memory won't get picked up by the query. As a result it's usually wise to do queries at the beginning.</p>

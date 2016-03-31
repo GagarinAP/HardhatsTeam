@@ -7,7 +7,13 @@ Theme colors
 #15a4fa / 21, 164, 250  - links/button color/backgroud(orange);
 */
 
+html {
+	height: 100%;
+}
+
 body {
+	position: relative;
+	min-height: 100%;
 	/*background-color: #f6f9f9;*/
 	background-color: #2d3950;
 	/*color: #2d3950;*/
@@ -26,6 +32,7 @@ body * {
 
 main {
 	padding-top: 69px;
+	padding-bottom: 54px;
 }
 
 section {
@@ -107,7 +114,7 @@ header {
 
 header .logo {
 	float: left;
-	font-size: 32px;
+	font-size: 28px;
 	line-height: 39px;
 	text-transform: uppercase;
 }
@@ -130,6 +137,11 @@ header .home-link {
 footer {
 	padding: 15px 0;
 	background: #B9BFBF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
 }
 
 footer p {
@@ -263,7 +275,7 @@ footer p {
 }
 
 .promo-section .thumb-image:hover h3 {
-	background: rgba(45, 57, 80, 1);
+	background: rgba(45, 57, 80, 0.8);
 }
 
 
@@ -353,7 +365,7 @@ footer p {
 === Gallery ===
 ***************************/
 .thumbs-section {
-	padding: 140px 0 80px 0;
+	/*padding: 140px 0 80px 0;*/
 }
 
 .thumbs-section .thumb-image:hover img {
@@ -368,6 +380,25 @@ footer p {
 	opacity: 0.4;
 }
 
-.thumbs-section .humb-image {}
+.thumbs-section img {
+	border: 4px solid #f6f9f9;
+}
+
+.thumbs-section .thumb-image img {
+	border: 0 none;
+}
+
+.thumbs-section .container > h3 {
+	display: inline-block;
+	padding: 2px 4px;
+	margin: 0;
+	background: #f6f9f9;
+	color: #2D3950;
+}
+
+.link-wrap {
+	padding: 15px 0;
+	text-align: center;
+}
 
 

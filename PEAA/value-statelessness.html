@@ -7,8 +7,7 @@
 	<title>The Value of Statelessness</title>
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<!-- <link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,700,300italic,600&subset=latin,cyrillic' rel='stylesheet' type='text/css' /> -->
-</head>
+  </head>
 <body>
 	<header>
 		<div class="container">
@@ -18,11 +17,11 @@
 	</header>
 	<main>
 		<section class="content-section">
-			<h1>The Value of Statelessness</h1>
-			<div class="wrap-image">
-					<img src="img/image_10.jpg" alt="">
-			</div>
 			<div class="container">
+				<h1>The Value of Statelessness</h1>
+				<div class="wrap-image">
+					<img src="img/image_10.jpg" alt="">
+				</div>
 				<p>What do people mean by a stateless server? The whole point of objects, of course, is that they combine state (data) with behavior. A true stateless object is one with no fields. Such animals do show up from time to time, but frankly, they're pretty rare. Indeed, you can make a strong case that a stateless object is a bad design.</p>
 				<p>As it turns out, however, this isn't what most people mean when they talk about statelessness in a distributed enterprise application. When people refer to a stateless server they mean an object that doesn't retain state between requests. Such an object may well have fields, but when you invoke a method on a stateless server the values of the fields are undefined.</p>
 				<p>An example of a stateless server object might be one that returns a Web page telling you all about a book. You invoke a call on it by accessing a URL—the object might be an ASP document or a servlet. In the URL you supply an ISBN number that the server uses to generate the HTTP reply. During the interaction the server object might stash the book's ISBN, title, and price in fields when it gets them back from thedatabase, before it generates the HTML; maybe it does some business logic to determine whichcomplimentary reviews to show the user. Once it's done its job, however, these values become useless. Thenext ISBN is a whole new story, and the server object will probably reinitialize to clear out any old values toavoid mistakes.</p>
