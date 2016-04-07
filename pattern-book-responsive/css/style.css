@@ -116,6 +116,7 @@ img {
 
 header {
 	position: fixed;
+	display: inline-block;
 	border-top: 6px solid #b0c77c;
 	z-index: 99;
 	top: -65px;
@@ -128,7 +129,8 @@ header {
       	  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-header:hover {
+header:hover,
+header:focus {
 	top: 0;
 }
 
@@ -154,7 +156,6 @@ header nav ul {
 }
 
 header nav {
-	padding-left: 60px;
 }
 
 header .author-name {
@@ -170,12 +171,14 @@ header .author-name {
 header .go-home-button {
 	position: fixed;
 	z-index: 10;
-	top: 0;
-	left: 0;
+	bottom: 0;
+	right: 0;
 	display: block;
-	width: 59px;
-	height: 59px;
-	background: #9db441 url(../img/ico_home.svg) 50% 50% no-repeat; 
+	width: 60px;
+	height: 60px;
+	border-left: 1px solid rgba(242,242,242, 0.95);
+  border-top: 1px solid rgba(242,242,242, 0.95);
+	background: #B0C77C  url(../img/ico_home.svg) 50% 50% no-repeat; 
 	-webkit-background-size: 30px 30px;
 	     -o-background-size: 30px 30px;
 	        background-size: 30px 30px;
@@ -200,14 +203,15 @@ header nav ul li a {
 }
 
 header nav ul li a.active,
-header nav ul li a:hover {
-	background: #3a4b4c;
-	color: #1d1d1d;
+header nav ul li a:hover,
+header nav ul li a:focus {
+	background: #b0c77c;
+	color: #f2f2f2;
 }
 
 header .arrow-down {
 	/*position: absolute;*/
-	display: block;
+	display: inline-block;
 	width: 65px;
 	height: 65px;
 	border-right: 1px solid rgba(242,242,242, 0.95);
@@ -217,6 +221,21 @@ header .arrow-down {
 	-webkit-background-size: 30px 30px;
 	     -o-background-size: 30px 30px;
 	        background-size: 30px 30px;
+	-webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
+	 	 -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
+	 	 	 	 	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+header .layout-indicator {
+	float: right;
+	width: 65px;
+	height: 65px;
+	border-left: 1px solid rgba(242,242,242, 0.95);
+	border-bottom: 1px solid rgba(242,242,242, 0.95);
+	background: #B0C77C url(../img/ico_desktop.svg) 50% 50% no-repeat;
+	-webkit-background-size: 40px auto;
+	     -o-background-size: 40px auto;
+	        background-size: 40px auto;
 	-webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
 	 	 -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
 	 	 	 	 	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
@@ -680,7 +699,7 @@ header .arrow-down {
 footer {
 	background: #3a4b4c;
 	border: 1px solid #484e4e;
-	padding: 20px 0px;
+	padding: 19px 0px;
 	color: #F2F2F2;
 }
 
@@ -711,6 +730,14 @@ footer p {
   	font-size: 24px;
   }
 
+	header .layout-indicator {
+  	background: #B0C77C url(../img/ico_laptop.svg) 50% 50% no-repeat;
+  	-webkit-background-size: 40px auto;
+	     -o-background-size: 40px auto;
+	        background-size: 40px auto;
+	}
+		
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -725,6 +752,18 @@ footer p {
   header .arrow-down {
   	display: none;
   }
+
+  header .layout-indicator {
+  	background: #B0C77C url(../img/ico_tablet.svg) 50% 50% no-repeat;
+  	-webkit-background-size: 40px auto;
+	     -o-background-size: 40px auto;
+	        background-size: 40px auto;
+	}
+
+	header nav ul li a {
+		padding: 10px 0;
+		font-size: 14px;
+	}
 
   .team-section,
   .patterns-section {
@@ -771,6 +810,24 @@ footer p {
     width: 460px;
   }
 
+  header {
+  	border-top-width: 3px;
+  }
+
+  header.header-menu {
+  	top: -276px;
+  }
+
+  header.header-menu .container {
+  	padding-left: 0;
+  	padding-right: 0;
+  }
+
+  header.header-menu:hover,
+  header.header-menu:focus {
+  	top: 0;
+  }
+
   header .container {
   	width: 100%;
   	table-layout: auto;
@@ -778,6 +835,38 @@ footer p {
 
   header .author-name {
 	  font-size: 18px;
+	  padding: 15px 0;
+	}
+
+	header .arrow-down.arrow-menu {
+		display: inline-block;
+		background-image: url('../img/ico_menu.svg');
+	}
+	
+	header .arrow-down.arrow-menu,
+	header .layout-indicator {
+		width: 50px;
+		height: 50px;
+  	-webkit-background-size: 30px auto;
+	     -o-background-size: 30px auto;
+	        background-size: 30px auto;
+	}
+
+	header .go-home-button {
+		width: 50px;
+		height: 50px;
+		-webkit-background-size: 35px auto;
+	       -o-background-size: 35px auto;
+	          background-size: 35px auto;
+	}
+
+	header nav ul li {
+		display: block;
+	}
+
+	header nav ul li a {
+		text-align: left;
+		padding: 10px 10px;
 	}
 
 	.promo-section {
@@ -873,7 +962,25 @@ footer p {
 
   header .author-name {
   	font-size: 12px;
+  	padding: 10px 0;
   }
+
+  header .layout-indicator {
+  	width: 40px;
+  	height: 40px;
+  	background: #B0C77C url(../img/ico_phone.svg) 50% 50% no-repeat;
+  	-webkit-background-size: 25px auto;
+	     -o-background-size: 25px auto;
+	        background-size: 25px auto;
+	}
+
+	header .go-home-button {
+		width: 40px;
+		height: 40px;
+		-webkit-background-size: 25px auto;
+	     -o-background-size: 25px auto;
+	        background-size: 25px auto;
+	}
 
   .promo-section {
   	background: none;
