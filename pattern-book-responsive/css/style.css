@@ -116,6 +116,7 @@ img {
 
 header {
 	position: fixed;
+	z-index: 10;
 	display: inline-block;
 	border-top: 6px solid #b0c77c;
 	z-index: 99;
@@ -168,23 +169,37 @@ header .author-name {
 	font-weight: 600;
 }
 
-header .go-home-button {
-	position: fixed;
-	z-index: 10;
+.go-home-button {
 	bottom: 0;
 	right: 0;
+	border-left: 1px solid rgba(242,242,242, 0.95);
+  border-top: 1px solid rgba(242,242,242, 0.95);
+	background: #B0C77C  url(../img/ico_home.png) 50% 50% no-repeat; 
+}
+
+.go-top {
+	bottom: 0;
+	left: 0;
+	border-right: 1px solid rgba(242,242,242, 0.95);
+  border-top: 1px solid rgba(242,242,242, 0.95);
+	background: #B0C77C  url(../img/ico_arrows_top.png) 50% 50% no-repeat; 
+}
+
+.go-top,
+.go-home-button {
+	position: fixed;
+	z-index: 10;
 	display: block;
 	width: 60px;
 	height: 60px;
-	border-left: 1px solid rgba(242,242,242, 0.95);
-  border-top: 1px solid rgba(242,242,242, 0.95);
-	background: #B0C77C  url(../img/ico_home.svg) 50% 50% no-repeat; 
 	-webkit-background-size: 30px 30px;
 	     -o-background-size: 30px 30px;
 	        background-size: 30px 30px;
 }
 
-header .go-home-button:hover {
+
+.go-top:hover,
+.go-home-button:hover {
 	background-color: rgba(157,180,65, 0.75);
 }
 
@@ -217,7 +232,7 @@ header .arrow-down {
 	border-right: 1px solid rgba(242,242,242, 0.95);
 	border-bottom: 1px solid rgba(242,242,242, 0.95);
 	cursor: pointer;
-	background: #B0C77C url(../img/ico_arrows.svg) 50% 50% no-repeat;
+	background: #B0C77C url(../img/ico_arrows.png) 50% 50% no-repeat;
 	-webkit-background-size: 30px 30px;
 	     -o-background-size: 30px 30px;
 	        background-size: 30px 30px;
@@ -226,13 +241,16 @@ header .arrow-down {
 	 	 	 	 	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-header .layout-indicator {
-	float: right;
+.layout-indicator {
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	right: 0;
 	width: 65px;
 	height: 65px;
 	border-left: 1px solid rgba(242,242,242, 0.95);
 	border-bottom: 1px solid rgba(242,242,242, 0.95);
-	background: #B0C77C url(../img/ico_desktop.svg) 50% 50% no-repeat;
+	background: #B0C77C url(../img/ico_desktop.png) 50% 50% no-repeat;
 	-webkit-background-size: 40px auto;
 	     -o-background-size: 40px auto;
 	        background-size: 40px auto;
@@ -631,8 +649,16 @@ footer {
 	color: #F2F2F2;
 }
 
+footer .container {
+}
+
 footer p {
 	margin: 0px;
+	text-align: center;
+}
+
+.cbalink {
+	display: none !important;
 }
 
 @media screen and (max-width: 1240px) {
@@ -658,19 +684,21 @@ footer p {
   	font-size: 24px;
   }
 
-	header .layout-indicator {
-  	background: #B0C77C url(../img/ico_laptop.svg) 50% 50% no-repeat;
+	.layout-indicator {
+  	background: #B0C77C url(../img/ico_laptop.png) 50% 50% no-repeat;
   	-webkit-background-size: 40px auto;
 	     -o-background-size: 40px auto;
 	        background-size: 40px auto;
 	}
-		
-
 }
 
 @media screen and (max-width: 1024px) {
   .container {
     width: 748px;
+  }
+
+  .layout-indicator {
+  	top: 64px;
   }
 
   header {
@@ -681,15 +709,15 @@ footer p {
   	display: none;
   }
 
-  header .layout-indicator {
-  	background: #B0C77C url(../img/ico_tablet.svg) 50% 50% no-repeat;
+  .layout-indicator {
+  	background: #B0C77C url(../img/ico_tablet.png) 50% 50% no-repeat;
   	-webkit-background-size: 40px auto;
 	     -o-background-size: 40px auto;
 	        background-size: 40px auto;
 	}
 
 	header nav ul li a {
-		padding: 10px 0;
+		padding: 8px 0;
 		font-size: 14px;
 	}
 
@@ -737,9 +765,19 @@ footer p {
     padding: 50px 0;
 	}
 }
+
 @media screen and (max-width: 768px) {
+
 	.container {
     width: 460px;
+  }
+
+  .layout-indicator {
+  	top: 0;
+  }
+
+  .layout-indicator.home-indicator {
+  	top: 52px;
   }
 
   header {
@@ -791,19 +829,20 @@ footer p {
 
 	header .arrow-down.arrow-menu {
 		display: inline-block;
-		background-image: url('../img/ico_menu.svg');
+		background-image: url('../img/ico_menu.png');
 	}
 	
 	header .arrow-down.arrow-menu,
-	header .layout-indicator {
+	.layout-indicator {
 		width: 50px;
 		height: 50px;
   	-webkit-background-size: 30px auto;
 	     -o-background-size: 30px auto;
 	        background-size: 30px auto;
 	}
-
-	header .go-home-button {
+	
+	.go-top,
+	.go-home-button {
 		width: 50px;
 		height: 50px;
 		-webkit-background-size: 35px auto;
@@ -943,21 +982,26 @@ footer p {
     width: 100%;
   }
 
+  .layout-indicator.home-indicator {
+  	top: 42px;
+  }
+
   header .author-name {
   	font-size: 12px;
   	padding: 10px 0;
   }
 
-  header .layout-indicator {
+  .layout-indicator {
   	width: 40px;
   	height: 40px;
-  	background: #B0C77C url(../img/ico_phone.svg) 50% 50% no-repeat;
+  	background: #B0C77C url(../img/ico_phone.png) 50% 50% no-repeat;
   	-webkit-background-size: 25px auto;
 	     -o-background-size: 25px auto;
 	        background-size: 25px auto;
 	}
-
-	header .go-home-button,
+	
+	.go-top,
+	.go-home-button,
 	header .arrow-down.arrow-menu {
 		width: 40px;
 		height: 40px;
@@ -1063,5 +1107,9 @@ footer p {
 
 	footer {
 		padding: 9px 0;
+	}
+
+	footer p {
+		font-size: 12px;
 	}
 }
