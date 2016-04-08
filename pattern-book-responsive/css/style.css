@@ -1098,6 +1098,7 @@ footer p {
 		border-width: 2px;
 	}
 
+	.content-section p.paragraph-two-column,
 	.content-section p.paragraph-three-column {
     margin: 10px 0;
 		-webkit-column-count: inherit;
